@@ -61,13 +61,4 @@ Utiliza el menú de navegación de la izquierda para explorar:
 - **Referencia**: Documentación técnica completa
 - **Mejores Prácticas**: Aprende a optimizar tu implementación
 
-## Necesitas Ayuda?
-
-- 📚 **Documentación**: Estás aquí
-- 💬 **Community**: https://community.midas.com
-- 🐙 **GitHub**: https://github.com/jitsucom/jitsu
-- 📧 **Email**: [email protected]
-
 ---
-
-**Plan Gratuito**: Comienza con hasta 200,000 eventos/mes con instancia ClickHouse incluida.
