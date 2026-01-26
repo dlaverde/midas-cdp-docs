@@ -10,16 +10,10 @@
 
 ## Comenzando
 
-* [Instalación y Configuración](comenzando/instalacion.md)
 * [Primeros Pasos](comenzando/primeros-pasos.md)
 
 ## Guías de Implementación
 
-* [JavaScript SDK](implementacion/javascript-sdk.md)
-  * [HTML Snippet](implementacion/javascript-sdk/html-snippet.md)
-  * [React](implementacion/javascript-sdk/react.md)
-  * [Next.js](implementacion/javascript-sdk/nextjs.md)
-  * [Configuración del SDK](implementacion/javascript-sdk/configuracion.md)
 * [Google Tag Manager](implementacion/google-tag-manager.md)
 * [Server-to-Server (HTTP API)](implementacion/server-to-server.md)
   * [Python](implementacion/server-to-server/python.md)
