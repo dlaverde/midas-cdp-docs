@@ -25,7 +25,7 @@ El CDP de Midas es una solución composable que te permite:
 
 ### 1. Crear una Cuenta
 
-Regístrate en el portal de Midas y obtén tu **Write Key** (Client Secret).
+Contacta al equipo de Midas y obtén tu **Write Key** (Client Secret).
 
 ### 2. Configurar Destino
 
