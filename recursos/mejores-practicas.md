@@ -131,22 +131,6 @@ Properties:
 Usado por: Marketing, Product
 ```
 
-## Testing
-
-✅ **Test en staging primero**
-```javascript
-const jitsu = jitsuClient({
-  writeKey: process.env.JITSU_KEY,
-  // Usa diferente key para staging
-});
-```
-
-✅ **Usa debug mode**
-```javascript
-jitsu.set('debug', true);
-// Verás eventos en consola
-```
-
 ## Monitoreo
 
 ✅ **Verifica que eventos llegan**

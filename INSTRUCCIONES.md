@@ -22,9 +22,6 @@ gitbook-docs-v2/
 ├── tracking/                    # Guías de implementación
 │   ├── web/
 │   │   ├── javascript.md
-│   │   ├── react.md
-│   │   ├── nextjs.md
-│   │   └── gtm.md
 │   ├── mobile/
 │   └── backend/
 │       └── http-api.md
@@ -38,7 +35,6 @@ gitbook-docs-v2/
 │   └── eventos.md
 └── recursos/                    # Ayuda adicional
     ├── faq.md
-    ├── migracion-segment.md
     └── mejores-practicas.md
 ```
 
@@ -71,35 +67,18 @@ gitbook-docs-v2/
 
 - ✅ Instalación paso a paso
 - ✅ Conceptos básicos explicados
-- ✅ Múltiples SDKs (Web, React, Next.js, GTM)
 - ✅ HTTP API para cualquier lenguaje
 - ✅ Casos de uso de E-commerce
-- ✅ Migración desde Segment
 - ✅ FAQ completo
 - ✅ Mejores prácticas
 
 ## Lo que NO Incluye
 
 - ❌ Configuración de infraestructura (manejado por Midas)
-- ❌ Configuración Classic (deprecada)
 - ❌ Detalles internos de implementación
 - ❌ Features avanzados no relevantes para clientes
-
-## Mantenimiento
-
-Para actualizar la documentación:
-
-1. Edita los archivos .md
-2. Commit y push a GitHub
-3. GitBook se actualiza automáticamente
-
-## Soporte
-
-Para preguntas sobre la documentación:
-📧 [email protected]
 
 ---
 
 **Versión**: 2.0  
-**Fecha**: Enero 2026  
-**Basado en**: Jitsu Moderno (no Classic)
+**Fecha**: Enero 2026

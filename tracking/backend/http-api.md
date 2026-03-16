@@ -12,7 +12,7 @@ POST https://cdp.companyname.m1das.app/api/s/s2s/{event-type}
 
 ```http
 Content-Type: application/json
-X-Write-Key: bVpiojHEpGwGVyKv35rT5ec3sQDLCZsL:SEw*uIE
+X-Write-Key: cdp.abc123def456.xyz
 ```
 
 ## Body
@@ -35,7 +35,7 @@ X-Write-Key: bVpiojHEpGwGVyKv35rT5ec3sQDLCZsL:SEw*uIE
 ```bash
 curl --location 'https://cdp.companyname.m1das.app/api/s/s2s/track' \
 --header 'Content-Type: application/json' \
---header 'X-Write-Key: bVpiojHEpGwGVyKv35rT5ec3sQDLCZsL:SEw*uIE' \
+--header 'X-Write-Key: cdp.abc123def456.xyz' \
 --data-raw '{
   "type": "track",
   "event": "testEvent",
@@ -92,7 +92,7 @@ import requests
 requests.post(
   'https://cdp.companyname.m1das.app/api/s/s2s/{event-type}',
   headers={
-    'Authorization': 'Bearer s2s.SECRET.HERE',
+    'X-Write-Key': 'cdp.abc123def456.xyz',
     'Content-Type': 'application/json'
   },
   json={

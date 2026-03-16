@@ -29,8 +29,6 @@ Sí, 100% compatible. Puedes:
 - Migrar sin cambiar código
 - Usar el mismo esquema de datos
 
-Ver [Migración desde Segment](migracion-segment.md).
-
 ## ¿Cómo obtengo mis credenciales?
 
 Contacta a tu account manager para obtener:
@@ -44,18 +42,6 @@ Sí, usa:
 - Node.js SDK
 - HTTP API directa
 - Cualquier lenguaje
-
-Ver [Backend Tracking](../tracking/backend/README.md).
-
-## ¿Funciona con Google Tag Manager?
-
-Sí, ver [GTM Guide](../tracking/web/gtm.md).
-
-## ¿Cómo verifico que los eventos llegan?
-
-1. **Debug mode**: `jitsu.set('debug', true)`
-2. **Network tab**: Busca requests a tu tracking host
-3. **Data warehouse**: Query tu tabla de eventos
 
 ## ¿Qué pasa si mi usuario tiene adblock?
 

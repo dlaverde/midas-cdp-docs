@@ -100,15 +100,6 @@ router.afterEach((to, from) => {
 });
 ```
 
-## Debug Mode
-
-```javascript
-jitsu.set('debug', true);
-// Ahora verás todos los eventos en consola
-```
-
 ## Próximos Pasos
 
-- [React](react.md) - Para apps React
-- [Google Tag Manager](gtm.md) - Sin acceso a código
 - [API Reference](../../referencia/api.md) - Documentación completa
