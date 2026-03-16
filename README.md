@@ -14,7 +14,6 @@ El CDP de Midas es una plataforma composable de datos de clientes que te permite
 ## Características Principales
 
 ✅ **Sin vendor lock-in** - Tus datos viven en TU warehouse  
-✅ **Open-source** - Basado en tecnología MIT  
 ✅ **Compatible con Segment** - Migración sin fricciones  
 ✅ **Funciones JavaScript** - Transforma datos en tiempo real  
 ✅ **Multiple SDKs** - Web, Mobile, Backend
