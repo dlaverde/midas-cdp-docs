@@ -1,35 +1,51 @@
-# Instalación y Configuración
+# Instalación
 
-Esta guía te ayudará a configurar el CDP de Midas en minutos.
+## Credenciales
 
-## Requisitos Previos
+Antes de comenzar, necesitas obtener de tu account manager:
 
-Necesitas un data warehouse:
-- Snowflake, BigQuery, Redshift, ClickHouse, o PostgreSQL
+| Credencial | Uso | Ejemplo |
+|------------|-----|---------|
+| **Write Key** | Cliente (navegador) | `js.abc123def456.xyz` |
+| **Server Secret** | Backend | `s2s.secret.key.here` |
+| **Tracking Host** | URL del CDP | `https://cdp.companydomain.m1das.app/p.js` |
 
-## Opción 1: Cloud (Recomendado)
+⚠️ **Importante**: Nunca expongas tu Server Secret en el navegador.
 
-### Paso 1: Crear Cuenta
-1. Visita https://app.midas.com/signup
-2. Verifica tu email
+## Instalación para Web
 
-### Paso 2: Obtener Write Key
+### Opción 1: Script Tag (Más Simple)
+
+Agrega este código antes del cierre de `</head>`:
+
+```html
+<script 
+  src="https://cdp.companydomain.m1das.app/p.js" 
+  data-write-key="TU_WRITE_KEY"
+  defer>
+</script>
 ```
-Client Secret: js.abc123def456.xyz789
-Server Secret: s2s.secret.key.here
+
+Esto carga el SDK automáticamente y lo hace disponible como `window.jitsu`.
+
+### Otros Lenguajes
+
+Para Python, Ruby, PHP, etc., usa la [HTTP API](../tracking/backend/http-api.md).
+
+## Verificar Instalación
+
+Después de instalar, envía un evento de prueba:
+
+```javascript
+jitsu.track('test_event', {
+  message: 'Hello from CDP de Midas!'
+});
 ```
 
-### Paso 3: Configurar Destino
-Conect tu data warehouse desde la UI.
-
-## Opción 2: Auto-hospedaje
-
-```bash
-git clone --depth 1 https://github.com/jitsucom/jitsu
-cd jitsu/docker
-docker-compose up -d
-```
+Verifica en tu data warehouse que el evento llegó correctamente.
 
 ## Próximos Pasos
-- [Primeros Pasos](primeros-pasos.md)
-- [JavaScript SDK](../implementacion/javascript-sdk.md)
+
+- [Conceptos Básicos](conceptos.md)
+- [Tu Primer Evento](primer-evento.md)
+- [JavaScript SDK](../tracking/web/javascript.md)

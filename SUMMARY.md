@@ -2,73 +2,47 @@
 
 * [Introducción](README.md)
 
-## Conceptos Fundamentales
-
-* [¿Qué es un Composable CDP?](conceptos/composable-cdp.md)
-* [Arquitectura del CDP de Midas](conceptos/arquitectura.md)
-* [Eventos y Propiedades](conceptos/eventos-propiedades.md)
-
 ## Comenzando
 
-* [Primeros Pasos](comenzando/primeros-pasos.md)
+* [Instalación](comenzando/instalacion.md)
+* [Conceptos Básicos](comenzando/conceptos.md)
+* [Tu Primer Evento](comenzando/primer-evento.md)
 
-## Guías de Implementación
+## Tracking
 
-* [Google Tag Manager](implementacion/google-tag-manager.md)
-* [Server-to-Server (HTTP API)](implementacion/server-to-server.md)
-  * [Python](implementacion/server-to-server/python.md)
-  * [Node.js](implementacion/server-to-server/nodejs.md)
-  * [PHP](implementacion/server-to-server/php.md)
-  * [Ruby](implementacion/server-to-server/ruby.md)
-  * [Go](implementacion/server-to-server/go.md)
-* [Compatibilidad con Segment](implementacion/segment.md)
-* [Node.js Server-Side](implementacion/nodejs-server-side.md)
-
-## Casos de Uso
-
-* [E-commerce y Retail](casos-uso/ecommerce.md)
-* [SaaS y B2B](casos-uso/saas-b2b.md)
-* [Content y Media](casos-uso/content-media.md)
-* [Mobile Apps](casos-uso/mobile-apps.md)
-* [Marketing Attribution](casos-uso/marketing-attribution.md)
+* [Web](tracking/web/README.md)
+  * [JavaScript (HTML)](tracking/web/javascript.md)
+  * [React](tracking/web/react.md)
+  * [Next.js](tracking/web/nextjs.md)
+  * [Google Tag Manager](tracking/web/gtm.md)
+* [Mobile](tracking/mobile/README.md)
+  * [iOS](tracking/mobile/ios.md)
+  * [Android](tracking/mobile/android.md)
+  * [React Native](tracking/mobile/react-native.md)
+* [Backend](tracking/backend/README.md)
+  * [Node.js](tracking/backend/nodejs.md)
+  * [Python](tracking/backend/python.md)
+  * [HTTP API](tracking/backend/http-api.md)
 
 ## Destinos
 
-* [Data Warehouses](destinos/data-warehouses.md)
-  * [Snowflake](destinos/data-warehouses/snowflake.md)
-  * [Google BigQuery](destinos/data-warehouses/bigquery.md)
-  * [Amazon Redshift](destinos/data-warehouses/redshift.md)
-  * [ClickHouse](destinos/data-warehouses/clickhouse.md)
-  * [PostgreSQL](destinos/data-warehouses/postgresql.md)
-* [Marketing & Analytics](destinos/marketing-analytics.md)
-* [CRM & Sales](destinos/crm-sales.md)
-* [Webhooks](destinos/webhooks.md)
+* [Data Warehouses](destinos/warehouses.md)
+* [Configuración de Destinos](destinos/configuracion.md)
 
-## Funciones y Transformaciones
+## Casos de Uso
 
-* [Introducción a Funciones](funciones/introduccion.md)
-* [Ejemplos de Transformaciones](funciones/ejemplos.md)
-  * [Filtrado de Eventos](funciones/ejemplos/filtrado.md)
-  * [Enriquecimiento de Datos](funciones/ejemplos/enriquecimiento.md)
-  * [Normalización](funciones/ejemplos/normalizacion.md)
-  * [Deduplicación](funciones/ejemplos/deduplicacion.md)
-  * [Notificaciones](funciones/ejemplos/notificaciones.md)
-  * [PII Masking](funciones/ejemplos/pii-masking.md)
-* [Usando NPM Packages](funciones/npm-packages.md)
-* [Key-Value Store](funciones/key-value-store.md)
+* [E-commerce](casos-uso/ecommerce.md)
+* [SaaS](casos-uso/saas.md)
+* [Media & Content](casos-uso/media.md)
 
-## Mejores Prácticas
+## Referencia
 
-* [Convenciones de Nombres](mejores-practicas/convenciones-nombres.md)
-* [Taxonomía de Eventos](mejores-practicas/taxonomia-eventos.md)
-* [Identificación de Usuarios](mejores-practicas/identificacion-usuarios.md)
-* [Performance y Optimización](mejores-practicas/performance.md)
-* [Privacy y Compliance](mejores-practicas/privacy-compliance.md)
-* [Testing](mejores-practicas/testing.md)
-* [Monitoring](mejores-practicas/monitoring.md)
+* [API Reference](referencia/api.md)
+* [Estructura de Eventos](referencia/eventos.md)
+* [Funciones](referencia/funciones.md)
 
 ## Recursos
 
-* [Soporte](recursos/soporte.md)
-* [Glosario](recursos/glosario.md)
 * [FAQ](recursos/faq.md)
+* [Migración desde Segment](recursos/migracion-segment.md)
+* [Mejores Prácticas](recursos/mejores-practicas.md)

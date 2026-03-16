@@ -1,64 +1,73 @@
-# Documentación del CDP de Midas
+# CDP de Midas - Documentación
 
-Bienvenido a la documentación oficial del CDP de Midas, una plataforma de datos de clientes (Customer Data Platform) de última generación que utiliza una arquitectura composable para ofrecer máxima flexibilidad, control y eficiencia en la gestión de datos de clientes.
+Bienvenido a la documentación oficial del CDP de Midas, tu plataforma de datos de clientes de próxima generación.
 
 ## ¿Qué es el CDP de Midas?
 
-El CDP de Midas es una solución composable que te permite:
+El CDP de Midas es una plataforma composable de datos de clientes que te permite:
 
-- **Recolectar** eventos de múltiples fuentes (web, móvil, backend, third-party)
-- **Almacenar** datos en tu propio data warehouse (zero-copy architecture)
-- **Transformar** y enriquecer datos en tiempo real
-- **Activar** datos hacia herramientas de marketing y analytics
+- **Capturar** eventos de usuarios en tiempo real desde web, móvil y backend
+- **Almacenar** toda tu data en tu propio data warehouse
+- **Activar** datos hacia tus herramientas de marketing y analytics
+- **Transformar** datos con funciones JavaScript personalizables
 
-### Características Principales
+## Características Principales
 
-- ✅ **Composable por diseño**: Integración nativa con tu data warehouse existente
-- ✅ **Zero-copy architecture**: Los datos permanecen en tu infraestructura
-- ✅ **Open-source**: 100% código abierto bajo licencia MIT
-- ✅ **Auto-hospedable**: Despliega en tu propia infraestructura o usa la versión en la nube
-- ✅ **Compatible con Segment**: Migración sin interrupciones desde Segment
-- ✅ **Múltiples métodos de recolección**: JavaScript, HTTP API, SDKs nativos, y más
-- ✅ **300+ conectores**: Integración con las principales plataformas de datos
+✅ **Sin vendor lock-in** - Tus datos viven en TU warehouse  
+✅ **Open-source** - Basado en tecnología MIT  
+✅ **Compatible con Segment** - Migración sin fricciones  
+✅ **Funciones JavaScript** - Transforma datos en tiempo real  
+✅ **Multiple SDKs** - Web, Mobile, Backend
 
 ## Inicio Rápido
 
-### 1. Crear una Cuenta
+### 1. Obtén tus credenciales
 
-Contacta al equipo de Midas y obtén tu **Write Key** (Client Secret).
+Contacta a tu account manager para obtener:
+- **Write Key**: Para enviar eventos desde el navegador
+- **Server Secret**: Para enviar eventos desde tu backend
+- **Tracking Host**: URL de tu instancia del CDP
 
-### 2. Configurar Destino
+### 2. Instala el SDK
 
-Conecta tu data warehouse (Snowflake, BigQuery, Redshift, etc.).
-
-### 3. Instalar SDK
+**Para sitios web:**
 
 ```html
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.midas.com/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="TU_CLIENT_SECRET_AQUI";;analytics.SNIPPET_VERSION="4.15.3";
-  analytics.load("TU_CLIENT_SECRET_AQUI");
-  analytics.page();
-  }}();
-</script>
+<script src="https://cdp.companydomain.m1das.app/p.js" 
+        data-write-key="TU_WRITE_KEY" 
+        defer></script>
 ```
 
-### 4. Enviar tu Primer Evento
+**Para aplicaciones JavaScript:**
+
+```bash
+npm install @jitsu/js
+```
+
+### 3. Envía tu primer evento
 
 ```javascript
-analytics.track('Button Clicked', {
+jitsu.track('button_clicked', {
   button_name: 'Get Started',
-  location: 'homepage'
+  page: '/landing'
 });
 ```
 
-## Explorar la Documentación
+## Estructura de la Documentación
 
-Utiliza el menú de navegación de la izquierda para explorar:
+- **[Comenzando](comenzando/instalacion.md)** - Configuración inicial
+- **[Tracking](tracking/web/javascript.md)** - Guías de implementación
+- **[Destinos](destinos/warehouses.md)** - Configurar data warehouses
+- **[Casos de Uso](casos-uso/ecommerce.md)** - Ejemplos prácticos
+- **[Referencia](referencia/api.md)** - API completa
 
-- **Conceptos**: Aprende sobre Composable CDPs y arquitectura
-- **Guías de Implementación**: Implementa tracking en diferentes plataformas
-- **Casos de Uso**: Ejemplos prácticos por industria
-- **Referencia**: Documentación técnica completa
-- **Mejores Prácticas**: Aprende a optimizar tu implementación
+## Soporte
+
+¿Necesitas ayuda?
+- 📧 Email: [email protected]
+- 💬 Slack: [Tu canal de Slack]
+- 📚 Documentación: Esta guía
 
 ---
+
+**Última actualización**: Enero 2026
