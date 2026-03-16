@@ -38,12 +38,6 @@ Contacta a tu account manager para obtener:
         defer></script>
 ```
 
-**Para aplicaciones JavaScript:**
-
-```bash
-npm install @jitsu/js
-```
-
 ### 3. Envía tu primer evento
 
 ```javascript
