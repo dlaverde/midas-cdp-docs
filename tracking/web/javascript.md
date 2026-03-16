@@ -1,11 +1,7 @@
 # JavaScript SDK
-
 SDK principal para sitios web y aplicaciones JavaScript.
-
 ## Instalación
-
 ### Via Script Tag
-
 ```html
 <script 
   src="https://cdp.companydomain.m1das.app/p.js" 
@@ -13,23 +9,16 @@ SDK principal para sitios web y aplicaciones JavaScript.
   defer>
 </script>
 ```
-
 ## API
-
 ### track()
-
 Trackea un evento:
-
 ```javascript
-// Event name only
+// Solo nombre del evento
 jitsu.track("buttonClick");
-
-// Event with properties
+// Evento con propiedades
 jitsu.track("itemPurchased", { price: 99 });
 ```
-
 **Ejemplo real:**
-
 ```javascript
 jitsu.track('product_purchased', {
   product_id: 'PROD-123',
@@ -39,49 +28,36 @@ jitsu.track('product_purchased', {
   quantity: 1
 });
 ```
-
 ### identify()
-
 Identifica al usuario:
-
 ```javascript
-// Identify user: `xyz` as a userId, and additional properties (traits)
+// Identifica al usuario `xyz` con un userId y propiedades adicionales (traits)
 jitsu.identify('xyz', {
   name: 'Michael Scott',
   company: 'Dunder Mifflin',
 })
-//or just set a userId
+// O simplemente establece un userId
 jitsu.identify('xyz')
 ```
-
 ### page()
-
 Trackea vista de página:
-
 ```javascript
-//trigger page view with a custom name
+// Dispara una vista de página con un nombre personalizado
 jitsu.page("Page Name");
-
-//trigger page view with a custom properties
+// Dispara una vista de página con propiedades personalizadas
 jitsu.page({  propName: "propVal" });
-
-//trigger page view with a name AND custom properties
+// Dispara una vista de página con nombre Y propiedades personalizadas
 jitsu.page("Page Name", {  propName: "propVal" });
 ```
-
 ## Eventos Automáticos
-
 El SDK captura automáticamente:
 - ✅ Pageviews
 - ✅ User Agent
 - ✅ IP
 - ✅ UTM parameters
 - ✅ Referrer
-
 ## Tracking en SPAs
-
 Para Single Page Applications:
-
 ```javascript
 // Detectar cambio de ruta
 window.addEventListener('popstate', () => {
@@ -90,7 +66,6 @@ window.addEventListener('popstate', () => {
     path: window.location.pathname
   });
 });
-
 // O con router
 router.afterEach((to, from) => {
   jitsu.page({
@@ -99,7 +74,5 @@ router.afterEach((to, from) => {
   });
 });
 ```
-
 ## Próximos Pasos
-
 - [API Reference](../../referencia/api.md) - Documentación completa
