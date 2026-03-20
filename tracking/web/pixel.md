@@ -27,17 +27,12 @@ El pixel tracking es perfecto para:
 ## Pixel Endpoint
 
 ```
-https://[your-jitsu-domain.com]/api/px/[event-type]
-```
-
-Para el CDP de Midas:
-```
-https://t.midas.media/api/px/[event-type]
+https://cdp.companydomain.m1das.app/api/px/[event-type]
 ```
 
 **Ejemplo completo:**
 ```
-https://t.midas.media/api/px/email_opened
+https://cdp.companydomain.m1das.app/api/px/email_opened
 ```
 
 ## Query Parameters
@@ -58,7 +53,7 @@ La forma más simple es pasar las propiedades del evento directamente como pará
 
 ```html
 <img 
-  src="https://t.midas.media/api/px/email_opened?writekey=TU_WRITE_KEY&user_id=user_123&campaign=newsletter_enero"
+  src="https://cdp.companydomain.m1das.app/api/px/email_opened?writekey=TU_WRITE_KEY&user_id=user_123&campaign=newsletter_enero"
   width="1" 
   height="1" 
   style="display:none;"
@@ -69,7 +64,7 @@ La forma más simple es pasar las propiedades del evento directamente como pará
 
 ```html
 <img 
-  src="https://t.midas.media/api/px/button_clicked?writekey=TU_WRITE_KEY&user_id=user_123&button_name=Get%20Started&page=/landing"
+  src="https://cdp.companydomain.m1das.appapi/px/button_clicked?writekey=TU_WRITE_KEY&user_id=user_123&button_name=Get%20Started&page=/landing"
   width="1" 
   height="1" 
   style="display:none;"
@@ -82,7 +77,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
 
 ```html
 <img 
-  src="https://t.midas.media/api/px/email_opened?writekey=TU_WRITE_KEY&data=eyJ1c2VyX2lkIjoidXNlcl8xMjMiLCJjYW1wYWlnbiI6Im5ld3NsZXR0ZXJfZW5lcm8iLCJzdWJqZWN0IjoiT2ZlcnRhcyBkZSBFbmVybyJ9"
+  src="https://cdp.companydomain.m1das.app/api/px/email_opened?writekey=TU_WRITE_KEY&data=eyJ1c2VyX2lkIjoidXNlcl8xMjMiLCJjYW1wYWlnbiI6Im5ld3NsZXR0ZXJfZW5lcm8iLCJzdWJqZWN0IjoiT2ZlcnRhcyBkZSBFbmVybyJ9"
   width="1" 
   height="1" 
   style="display:none;"
@@ -113,7 +108,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
   
   <!-- Pixel de tracking al final -->
   <img 
-    src="https://t.midas.media/api/px/email_opened?writekey=TU_WRITE_KEY&user_id={{ user.id }}&campaign=promo_verano&email_id={{ email.id }}"
+    src="https://cdp.companydomain.m1das.app/api/px/email_opened?writekey=TU_WRITE_KEY&user_id={{ user.id }}&campaign=promo_verano&email_id={{ email.id }}"
     width="1" 
     height="1" 
     style="display:none;"
@@ -127,7 +122,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
 ```html
 <a href="https://tutienda.com/promo?utm_source=email&utm_campaign=verano">
   <img 
-    src="https://t.midas.media/api/px/email_link_clicked?writekey=TU_WRITE_KEY&user_id={{ user.id }}&link_name=promo_verano&destination=tienda" 
+    src="https://cdp.companydomain.m1das.app/api/px/email_link_clicked?writekey=TU_WRITE_KEY&user_id={{ user.id }}&link_name=promo_verano&destination=tienda" 
     width="1" 
     height="1" 
     style="display:none;"
@@ -145,7 +140,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
   
   <!-- Pixel de tracking de impresión -->
   <img 
-    src="https://t.midas.media/api/px/banner_viewed?writekey=TU_WRITE_KEY&campaign=display_q1&placement=homepage&banner_id=summer_sale"
+    src="https://cdp.companydomain.m1das.app/api/px/banner_viewed?writekey=TU_WRITE_KEY&campaign=display_q1&placement=homepage&banner_id=summer_sale"
     width="1" 
     height="1" 
     style="display:none;"
@@ -160,7 +155,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
 <body>
   <!-- Pixel de apertura -->
   <img 
-    src="https://t.midas.media/api/px/newsletter_opened?writekey=TU_KEY&user_id=123&newsletter_id=enero_2026" 
+    src="https://cdp.companydomain.m1das.app/api/px/newsletter_opened?writekey=TU_KEY&user_id=123&newsletter_id=enero_2026" 
     width="1" 
     height="1" 
     style="display:none;"
@@ -171,7 +166,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
   <!-- Link 1 con tracking -->
   <a href="https://tienda.com/producto-a">
     <img 
-      src="https://t.midas.media/api/px/link_clicked?writekey=TU_KEY&user_id=123&link_id=producto_a&position=1" 
+      src="https://cdp.companydomain.m1das.app/api/px/link_clicked?writekey=TU_KEY&user_id=123&link_id=producto_a&position=1" 
       width="1" 
       height="1" 
       style="display:none;"
@@ -182,7 +177,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
   <!-- Link 2 con tracking -->
   <a href="https://tienda.com/producto-b">
     <img 
-      src="https://t.midas.media/api/px/link_clicked?writekey=TU_KEY&user_id=123&link_id=producto_b&position=2" 
+      src="https://cdp.companydomain.m1das.app/api/px/link_clicked?writekey=TU_KEY&user_id=123&link_id=producto_b&position=2" 
       width="1" 
       height="1" 
       style="display:none;"
@@ -193,156 +188,7 @@ Para eventos más complejos, codifica el JSON payload en base64 usando el parám
 </html>
 ```
 
-### 5. Enriquecimiento con Headers HTTP
 
-```html
-<!-- Pixel con process_headers para capturar Referrer y Cookies -->
-<img 
-  src="https://t.midas.media/api/px/page_viewed?writekey=TU_KEY&process_headers=true&cookie_domain=.tudominio.com&page=/landing"
-  width="1" 
-  height="1" 
-  style="display:none;"
-/>
-```
-
-Esto capturará automáticamente:
-- **Referrer** del header HTTP
-- **Cookies** del navegador
-- Creará/actualizará cookie `__eventn_id` para tracking anónimo
-
-## Generación de Base64
-
-### JavaScript
-
-```javascript
-const eventData = {
-  user_id: 'user_123',
-  campaign: 'newsletter_enero',
-  subject: 'Ofertas Especiales'
-};
-
-const base64Data = btoa(JSON.stringify(eventData));
-const writeKey = 'TU_WRITE_KEY';
-const eventType = 'email_opened';
-
-const pixelUrl = `https://t.midas.media/api/px/${eventType}?writekey=${writeKey}&data=${base64Data}`;
-
-console.log(pixelUrl);
-```
-
-### Python
-
-```python
-import json
-import base64
-from urllib.parse import quote
-
-event_data = {
-    'user_id': 'user_123',
-    'campaign': 'newsletter_enero',
-    'subject': 'Ofertas Especiales'
-}
-
-json_str = json.dumps(event_data)
-base64_data = base64.b64encode(json_str.encode()).decode()
-
-write_key = 'TU_WRITE_KEY'
-event_type = 'email_opened'
-
-pixel_url = f'https://t.midas.media/api/px/{event_type}?writekey={write_key}&data={base64_data}'
-
-print(pixel_url)
-```
-
-### PHP
-
-```php
-<?php
-$eventData = [
-    'user_id' => 'user_123',
-    'campaign' => 'newsletter_enero',
-    'subject' => 'Ofertas Especiales'
-];
-
-$jsonStr = json_encode($eventData);
-$base64Data = base64_encode($jsonStr);
-
-$writeKey = 'TU_WRITE_KEY';
-$eventType = 'email_opened';
-
-$pixelUrl = "https://t.midas.media/api/px/{$eventType}?writekey={$writeKey}&data={$base64Data}";
-
-echo $pixelUrl;
-?>
-```
-
-### Ruby
-
-```ruby
-require 'json'
-require 'base64'
-
-event_data = {
-  user_id: 'user_123',
-  campaign: 'newsletter_enero',
-  subject: 'Ofertas Especiales'
-}
-
-json_str = event_data.to_json
-base64_data = Base64.strict_encode64(json_str)
-
-write_key = 'TU_WRITE_KEY'
-event_type = 'email_opened'
-
-pixel_url = "https://t.midas.media/api/px/#{event_type}?writekey=#{write_key}&data=#{base64_data}"
-
-puts pixel_url
-```
-
-## Mejores Prácticas
-
-### ✅ DO
-
-```html
-<!-- Pixel al final del body -->
-<body>
-  <h1>Contenido</h1>
-  <p>Más contenido...</p>
-  
-  <!-- Pixel al final -->
-  <img src="..." width="1" height="1" style="display:none;" />
-</body>
-```
-
-```html
-<!-- IDs únicos por usuario -->
-<img src="https://t.midas.media/api/s/s2s/pixel?token=KEY&event=email_opened&user_id={{ unique_user_id }}" />
-```
-
-```html
-<!-- Descriptivo en nombres de eventos -->
-<img src="...?event=newsletter_january_2026_opened&campaign=promo" />
-```
-
-### ❌ DON'T
-
-```html
-<!-- ❌ No pongas el pixel al inicio -->
-<body>
-  <img src="..." />  <!-- Muy temprano -->
-  <h1>Contenido</h1>
-</body>
-```
-
-```html
-<!-- ❌ No uses datos sensibles en la URL -->
-<img src="...?email=user@example.com&password=123" />
-```
-
-```html
-<!-- ❌ No hagas URLs muy largas (limite ~2000 caracteres) -->
-<img src="...?property1=...&property2=...&property100=..." />
-```
 
 ## Consideraciones de Privacidad
 
@@ -396,18 +242,18 @@ puts pixel_url
 
 ```bash
 # Test simple con query parameters
-curl "https://t.midas.media/api/px/test_pixel?writekey=TU_WRITE_KEY&test=true&user_id=test_123"
+curl "https://cdp.companydomain.m1das.app/api/px/test_pixel?writekey=TU_WRITE_KEY&test=true&user_id=test_123"
 ```
 
 ```bash
 # Test con data en base64
-curl "https://t.midas.media/api/px/test_pixel?writekey=TU_WRITE_KEY&data=eyJ1c2VyX2lkIjoidGVzdF8xMjMiLCJ0ZXN0Ijp0cnVlfQ=="
+curl "https://cdp.companydomain.m1das.app/api/px/test_pixel?writekey=TU_WRITE_KEY&data=eyJ1c2VyX2lkIjoidGVzdF8xMjMiLCJ0ZXN0Ijp0cnVlfQ=="
 ```
 
 ```bash
 # Test con process_headers
 curl -H "Referer: https://google.com" \
-     "https://t.midas.media/api/px/test_pixel?writekey=TU_WRITE_KEY&process_headers=true"
+     "https://cdp.companydomain.m1das.app/api/px/test_pixel?writekey=TU_WRITE_KEY&process_headers=true"
 ```
 
 ## Eventos Típicos para Email
@@ -428,17 +274,6 @@ email_forwarded
 // Impresión de imagen
 email_image_loaded
 ```
-
-## Próximos Pasos
-
-- [JavaScript SDK](javascript.md) - Para tracking más robusto
-- [GTM](gtm.md) - Implementación sin código
-- [API Reference](../../referencia/api.md) - Documentación completa
-
-## Referencias
-
-- [Documentación oficial de Jitsu Pixel API](https://docs.jitsu.com/sending-data/pixel) - Referencia completa y actualizada
-- Disponible desde Jitsu v2.8.2
 
 ---
 
