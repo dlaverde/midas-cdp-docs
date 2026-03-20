@@ -38,7 +38,7 @@ https://cdp.companydomain.m1das.app/api/px/email_opened
 
 | Parámetro | Descripción | Requerido |
 |-----------|-------------|-----------|
-| `writekey` | Write Key de tu Jitsu Stream configurado | ✅ Sí |
+| `writekey` | Write Key de tu Midas CDP Stream configurado | ✅ Sí |
 | `data` | JSON payload codificado en base64 | No |
 | `path.to.node` | Path al nodo donde escribir el valor (formato JSON path) | No |
 | `process_headers` | Boolean. Enriquece evento con datos de headers HTTP: Referrer y Cookies | No |
