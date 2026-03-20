@@ -2,7 +2,6 @@
 
 Trackea eventos usando una imagen invisible 1x1, ideal para entornos donde JavaScript no está disponible.
 
-> ℹ️ **Disponible desde**: Jitsu v2.8.2
 
 ## ¿Cuándo usar Pixel Tracking?
 
@@ -36,8 +35,6 @@ https://cdp.companydomain.m1das.app/api/px/email_opened
 ```
 
 ## Query Parameters
-
-Según la documentación oficial de Jitsu, estos son los parámetros disponibles:
 
 | Parámetro | Descripción | Requerido |
 |-----------|-------------|-----------|
