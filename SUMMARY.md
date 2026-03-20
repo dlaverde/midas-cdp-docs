@@ -12,9 +12,6 @@
 
 * [Web](tracking/web/README.md)
   * [JavaScript (HTML)](tracking/web/javascript.md)
-  * [React](tracking/web/react.md)
-  * [Next.js](tracking/web/nextjs.md)
-  * [Google Tag Manager](tracking/web/gtm.md)
   * [Pixel Tracking](tracking/web/pixel.md)
 * [Backend](tracking/backend/README.md)
   * [HTTP API](tracking/backend/http-api.md)
