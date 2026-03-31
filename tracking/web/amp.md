@@ -138,6 +138,6 @@ Las propiedades definidas en el nivel superior de `extraUrlParams` se envían co
 
 ## Notas para el equipo de desarrollo
 
-- Los eventos llegan al esquema `amp_events` en PostgreSQL. La tabla principal es `amp_events.pages`.
-- El `anonymousId` en páginas AMP tiene el formato `amp-<id>` y es **distinto** al `anonymous_id` que genera el SDK de JavaScript en páginas no-AMP. Esto significa que un mismo usuario navegando entre páginas AMP (en caché de Google) y páginas normales del sitio generará dos identidades separadas, a menos que se implemente el **AMP Linker** (ver documentación avanzada).
+- Los eventos llegan al esquema `amp_events` en el destino de Midas. La tabla principal es `amp_events.pages`.
+- El `anonymousId` en páginas AMP tiene el formato `amp-<id>` y es **distinto** al `anonymous_id` que genera el SDK de JavaScript en páginas no-AMP. Esto significa que un mismo usuario navegando entre páginas AMP (en caché de Google) y páginas normales del sitio generará dos identidades separadas.
 - No incluir el snippet en páginas no-AMP; para esas páginas el tracking ya está cubierto por el SDK de JavaScript de Midas.
