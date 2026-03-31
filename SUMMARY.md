@@ -13,6 +13,7 @@
 * [Web](tracking/web/README.md)
   * [JavaScript (HTML)](tracking/web/javascript.md)
   * [Pixel Tracking](tracking/web/pixel.md)
+  * [AMP Tracking](tracking/web/amp.md)
 * [Backend](tracking/backend/README.md)
   * [HTTP API](tracking/backend/http-api.md)
 
