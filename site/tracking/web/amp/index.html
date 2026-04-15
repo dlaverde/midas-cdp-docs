@@ -1,0 +1,2077 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tudomain.com/tracking/web/amp/">
+      
+      
+        <link rel="prev" href="../gtm/">
+      
+      
+        <link rel="next" href="../pixel/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>AMP - Mi Documentación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#implementacion-de-amp-analytics-midas-cdp" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Mi Documentación" class="md-header__button md-logo" aria-label="Mi Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mi Documentación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AMP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../comenzando/conceptos/" class="md-tabs__link">
+          
+  
+  
+  Comenzando
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../casos-uso/ecommerce/" class="md-tabs__link">
+          
+  
+  
+  Casos de uso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../javascript/" class="md-tabs__link">
+          
+  
+  
+  Tracking
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../destinos/configuracion/" class="md-tabs__link">
+          
+  
+  
+  Destinos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../referencia/api/" class="md-tabs__link">
+          
+  
+  
+  Referencia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../recursos/faq/" class="md-tabs__link">
+          
+  
+  
+  Recursos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mi Documentación" class="md-nav__button md-logo" aria-label="Mi Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mi Documentación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comenzando
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comenzando
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comenzando/conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comenzando/instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comenzando/primer-evento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primer evento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de uso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Casos de uso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../casos-uso/ecommerce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E-commerce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tracking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    React
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gtm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos previos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-incluir-el-script-del-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1 — Incluir el script del componente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-agregar-el-bloque-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2 — Agregar el bloque de configuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evento-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evento Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evento-track" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evento Track
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-propiedades-que-se-recolectan-automaticamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3 — Propiedades que se recolectan automáticamente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-opcional-propiedades-personalizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4 (opcional) — Propiedades personalizadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4 (opcional) — Propiedades personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-globales-para-todos-los-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades globales (para todos los eventos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-por-evento-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades por evento específico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-utm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros UTM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amp-linker-sesion-unificada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AMP Linker (sesión unificada)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-para-el-equipo-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas para el equipo de desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pixel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pixel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Backend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/http-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Destinos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Destinos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../destinos/configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../destinos/warehouses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warehouses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referencia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../referencia/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../referencia/eventos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eventos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Recursos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../recursos/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../recursos/mejores-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mejores prácticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos previos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-incluir-el-script-del-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1 — Incluir el script del componente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-agregar-el-bloque-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2 — Agregar el bloque de configuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evento-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evento Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evento-track" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evento Track
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-propiedades-que-se-recolectan-automaticamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3 — Propiedades que se recolectan automáticamente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-opcional-propiedades-personalizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4 (opcional) — Propiedades personalizadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4 (opcional) — Propiedades personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-globales-para-todos-los-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades globales (para todos los eventos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-por-evento-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades por evento específico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-utm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros UTM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amp-linker-sesion-unificada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AMP Linker (sesión unificada)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-para-el-equipo-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas para el equipo de desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="implementacion-de-amp-analytics-midas-cdp">Implementación de AMP Analytics — Midas CDP</h1>
+<h2 id="descripcion-general">Descripción general</h2>
+<p>Para los sitios que sirven páginas en formato AMP, la recolección de eventos se realiza a través del componente <code>amp-analytics</code>, que envía los datos directamente al backend del CDP. Los eventos se almacenan en el esquema <code>amp_events</code> del destino de Midas.</p>
+<blockquote>
+<p><strong>Importante:</strong> Dado que AMP no permite la ejecución de JavaScript arbitrario, esta integración opera exclusivamente en <strong>cloud mode</strong>: los eventos se envían desde el navegador del usuario al backend, sin procesamiento en el dispositivo. No se soportan destinos que requieran ejecución en el cliente.</p>
+</blockquote>
+<hr />
+<h2 id="requisitos-previos">Requisitos previos</h2>
+<p>Antes de agregar el snippet a una página AMP necesitas tener a mano dos valores, que el equipo de Midas te proporcionará:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WRITE_KEY</code></td>
+<td>Clave de escritura de la fuente AMP registrada en el dashboard</td>
+</tr>
+<tr>
+<td><code>DATA_PLANE_URL</code></td>
+<td>URL del data plane del CDP (ej. <code>https://ingest.m1das.media</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="paso-1-incluir-el-script-del-componente">Paso 1 — Incluir el script del componente</h2>
+<p>Agrega la siguiente línea antes del cierre de la etiqueta <code>&lt;/head&gt;</code> de tu página AMP:</p>
+<pre><code class="language-html">&lt;script async custom-element=&quot;amp-analytics&quot;
+  src=&quot;https://cdn.ampproject.org/v0/amp-analytics-0.1.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<hr />
+<h2 id="paso-2-agregar-el-bloque-de-configuracion">Paso 2 — Agregar el bloque de configuración</h2>
+<p>Agrega el siguiente bloque dentro de tu etiqueta <code>&lt;body&gt;</code>, reemplazando <code>WRITE_KEY</code>, <code>DATA_PLANE_URL</code> y el nombre de la página:</p>
+<pre><code class="language-html">&lt;amp-analytics config=&quot;https://cdn.rudderlabs.com/amp/rudderstack.json&quot;&gt;
+  &lt;script type=&quot;application/json&quot;&gt;
+    {
+      &quot;vars&quot;: {
+        &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+        &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+        &quot;pageName&quot;: &quot;Nombre de la página&quot;
+      }
+    }
+  &lt;/script&gt;
+&lt;/amp-analytics&gt;
+</code></pre>
+<p>Con esta configuración mínima, el componente enviará automáticamente un evento <code>page</code> cada vez que se cargue la página.</p>
+<hr />
+<h2 id="evento-page">Evento Page</h2>
+<p>El componente incluye un page view automático al cargar la página. Puedes configurar el nombre mediante la variable <code>pageName</code>:</p>
+<pre><code class="language-json">&quot;vars&quot;: {
+  &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+  &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+  &quot;pageName&quot;: &quot;Nombre de la página&quot;
+}
+</code></pre>
+<p>Si no defines <code>pageName</code>, el evento se registrará con el nombre <code>Unknown Page</code>.</p>
+<hr />
+<h2 id="evento-track">Evento Track</h2>
+<p>Para registrar eventos de interacción del usuario (clics, scroll, visibilidad de elementos, etc.), usa la sección <code>triggers</code>. Define el nombre del evento en <code>vars.eventName</code> y apunta el <code>request</code> a <code>track</code>:</p>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;amp-analytics config=&quot;https://cdn.rudderlabs.com/amp/rudderstack.json&quot;&gt;
+    &lt;script type=&quot;application/json&quot;&gt;
+      {
+        &quot;vars&quot;: {
+          &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+          &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+          &quot;pageName&quot;: &quot;Mi página AMP&quot;
+        },
+        &quot;triggers&quot;: {
+          &quot;clickEnBoton&quot;: {
+            &quot;on&quot;: &quot;click&quot;,
+            &quot;selector&quot;: &quot;#cta-boton&quot;,
+            &quot;request&quot;: &quot;track&quot;,
+            &quot;vars&quot;: {
+              &quot;eventName&quot;: &quot;cta_click&quot;
+            },
+            &quot;extraUrlParams&quot;: {
+              &quot;properties.tipo_clic&quot;: &quot;boton_primario&quot;
+            }
+          }
+        }
+      }
+    &lt;/script&gt;
+  &lt;/amp-analytics&gt;
+
+  &lt;!-- Elemento que dispara el evento --&gt;
+  &lt;button id=&quot;cta-boton&quot;&gt;Suscríbete&lt;/button&gt;
+&lt;/body&gt;
+</code></pre>
+<p>Puedes definir múltiples triggers dentro del mismo bloque. Cada trigger puede tener su propio <code>eventName</code> y sus propias <code>extraUrlParams</code>.</p>
+<hr />
+<h2 id="paso-3-propiedades-que-se-recolectan-automaticamente">Paso 3 — Propiedades que se recolectan automáticamente</h2>
+<p>Sin ninguna configuración adicional, cada evento incluye las siguientes propiedades:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anonymousId</code></td>
+<td>Identificador único del cliente AMP (<code>amp-&lt;id&gt;</code>)</td>
+</tr>
+<tr>
+<td><code>context.locale</code></td>
+<td>Idioma del navegador (ej. <code>es-CO</code>)</td>
+</tr>
+<tr>
+<td><code>context.page.path</code></td>
+<td>Ruta de la URL (ej. <code>/noticias/articulo-1</code>)</td>
+</tr>
+<tr>
+<td><code>context.page.url</code></td>
+<td>URL completa de la página</td>
+</tr>
+<tr>
+<td><code>context.page.referrer</code></td>
+<td>URL de referencia</td>
+</tr>
+<tr>
+<td><code>context.page.title</code></td>
+<td>Título del documento HTML</td>
+</tr>
+<tr>
+<td><code>context.screen.width</code></td>
+<td>Ancho de pantalla en píxeles</td>
+</tr>
+<tr>
+<td><code>context.screen.height</code></td>
+<td>Alto de pantalla en píxeles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="paso-4-opcional-propiedades-personalizadas">Paso 4 (opcional) — Propiedades personalizadas</h2>
+<p>Puedes enriquecer los eventos con metadatos del contenido usando <code>extraUrlParams</code>. Toda propiedad debe llevar el prefijo <code>properties.</code>.</p>
+<p>Existen dos niveles:</p>
+<ul>
+<li><strong>A nivel raíz:</strong> se envían con <strong>todos</strong> los eventos de la página (el <code>page</code> automático y cualquier <code>track</code>).</li>
+<li><strong>Dentro de un trigger:</strong> se envían <strong>solo</strong> con ese evento específico.</li>
+</ul>
+<h3 id="propiedades-globales-para-todos-los-eventos">Propiedades globales (para todos los eventos)</h3>
+<pre><code class="language-html">&lt;amp-analytics config=&quot;https://cdn.rudderlabs.com/amp/rudderstack.json&quot;&gt;
+  &lt;script type=&quot;application/json&quot;&gt;
+    {
+      &quot;vars&quot;: {
+        &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+        &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+        &quot;pageName&quot;: &quot;Nombre de la página&quot;
+      },
+      &quot;extraUrlParams&quot;: {
+        &quot;properties.seccion&quot;: &quot;economia&quot;,
+        &quot;properties.autor&quot;: &quot;Juan Pérez&quot;,
+        &quot;properties.article_id&quot;: &quot;mi-articulo-123&quot;
+      }
+    }
+  &lt;/script&gt;
+&lt;/amp-analytics&gt;
+</code></pre>
+<h3 id="propiedades-por-evento-especifico">Propiedades por evento específico</h3>
+<pre><code class="language-html">&lt;amp-analytics config=&quot;https://cdn.rudderlabs.com/amp/rudderstack.json&quot;&gt;
+  &lt;script type=&quot;application/json&quot;&gt;
+    {
+      &quot;vars&quot;: {
+        &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+        &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+        &quot;pageName&quot;: &quot;Mi página AMP&quot;
+      },
+      &quot;triggers&quot;: {
+        &quot;clickEnlace&quot;: {
+          &quot;on&quot;: &quot;click&quot;,
+          &quot;selector&quot;: &quot;#enlace-1&quot;,
+          &quot;request&quot;: &quot;track&quot;,
+          &quot;vars&quot;: { &quot;eventName&quot;: &quot;enlace_click&quot; },
+          &quot;extraUrlParams&quot;: {
+            &quot;properties.destino&quot;: &quot;pagina-producto&quot;
+          }
+        }
+      },
+      &quot;extraUrlParams&quot;: {
+        &quot;properties.seccion&quot;: &quot;home&quot;,
+        &quot;properties.article_id&quot;: &quot;art-001&quot;
+      }
+    }
+  &lt;/script&gt;
+&lt;/amp-analytics&gt;
+</code></pre>
+<p>En este ejemplo, <code>seccion</code> y <code>article_id</code> se envían en <strong>todos</strong> los eventos, mientras que <code>destino</code> solo se envía en el evento <code>enlace_click</code>.</p>
+<hr />
+<h2 id="parametros-utm">Parámetros UTM</h2>
+<p>AMP no captura automáticamente los parámetros UTM. Debes pasarlos manualmente usando <code>extraUrlParams</code>:</p>
+<pre><code class="language-html">&lt;amp-analytics config=&quot;https://cdn.rudderlabs.com/amp/rudderstack.json&quot;&gt;
+  &lt;script type=&quot;application/json&quot;&gt;
+    {
+      &quot;vars&quot;: {
+        &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+        &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+        &quot;pageName&quot;: &quot;Nombre de la página&quot;
+      },
+      &quot;extraUrlParams&quot;: {
+        &quot;properties.utm_source&quot;: &quot;google&quot;,
+        &quot;properties.utm_medium&quot;: &quot;cpc&quot;,
+        &quot;properties.utm_campaign&quot;: &quot;verano-2025&quot;
+      }
+    }
+  &lt;/script&gt;
+&lt;/amp-analytics&gt;
+</code></pre>
+<hr />
+<h2 id="amp-linker-sesion-unificada">AMP Linker (sesión unificada)</h2>
+<p>Cuando un usuario navega desde una página AMP en caché (p. ej., Google AMP Cache) hacia una página AMP en tu propio dominio, el AMP Client ID puede cambiar, generando dos identidades separadas. Para mantener la continuidad de sesión, activa el <strong>AMP Linker</strong>:</p>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;amp-analytics config=&quot;https://cdn.rudderlabs.com/amp/rudderstack.json&quot;&gt;
+    &lt;script type=&quot;application/json&quot;&gt;
+      {
+        &quot;vars&quot;: {
+          &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+          &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+          &quot;pageName&quot;: &quot;Mi página AMP&quot;
+        },
+        &quot;linkers&quot;: {
+          &quot;enabled&quot;: true
+        }
+      }
+    &lt;/script&gt;
+  &lt;/amp-analytics&gt;
+&lt;/body&gt;
+</code></pre>
+<p>Con el linker activado, el AMP Client ID se propaga como parámetro en los enlaces salientes y se usa para establecer una cookie de primera parte en tu dominio, permitiendo identificar al mismo usuario en páginas AMP cacheadas y en páginas AMP propias.</p>
+<blockquote>
+<p><strong>Nota:</strong> Para unificar la identidad entre páginas AMP y páginas normales (no-AMP), es necesario integrar adicionalmente el SDK de JavaScript de Midas en las páginas no-AMP y leer el parámetro del linker desde allí.</p>
+</blockquote>
+<hr />
+<h2 id="ejemplo-completo">Ejemplo completo</h2>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html ⚡&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Mi artículo AMP&lt;/title&gt;
+
+  &lt;!-- Componente AMP Analytics --&gt;
+  &lt;script async custom-element=&quot;amp-analytics&quot;
+    src=&quot;https://cdn.ampproject.org/v0/amp-analytics-0.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;amp-analytics config=&quot;https://cdn.rudderlabs.com/amp/rudderstack.json&quot;&gt;
+    &lt;script type=&quot;application/json&quot;&gt;
+      {
+        &quot;vars&quot;: {
+          &quot;writeKey&quot;: &quot;WRITE_KEY&quot;,
+          &quot;dataPlaneUrl&quot;: &quot;DATA_PLANE_URL&quot;,
+          &quot;pageName&quot;: &quot;Mi artículo AMP&quot;
+        },
+        &quot;triggers&quot;: {
+          &quot;clickCompartir&quot;: {
+            &quot;on&quot;: &quot;click&quot;,
+            &quot;selector&quot;: &quot;#btn-compartir&quot;,
+            &quot;request&quot;: &quot;track&quot;,
+            &quot;vars&quot;: {
+              &quot;eventName&quot;: &quot;articulo_compartido&quot;
+            },
+            &quot;extraUrlParams&quot;: {
+              &quot;properties.red_social&quot;: &quot;twitter&quot;
+            }
+          }
+        },
+        &quot;extraUrlParams&quot;: {
+          &quot;properties.seccion&quot;: &quot;economia&quot;,
+          &quot;properties.autor&quot;: &quot;Juan Pérez&quot;,
+          &quot;properties.article_id&quot;: &quot;mi-articulo-123&quot;,
+          &quot;properties.utm_source&quot;: &quot;newsletter&quot;,
+          &quot;properties.utm_medium&quot;: &quot;email&quot;
+        },
+        &quot;linkers&quot;: {
+          &quot;enabled&quot;: true
+        }
+      }
+    &lt;/script&gt;
+  &lt;/amp-analytics&gt;
+
+  &lt;h1&gt;Título del artículo&lt;/h1&gt;
+  &lt;button id=&quot;btn-compartir&quot;&gt;Compartir en Twitter&lt;/button&gt;
+  &lt;!-- Contenido --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<hr />
+<h2 id="notas-para-el-equipo-de-desarrollo">Notas para el equipo de desarrollo</h2>
+<ul>
+<li>Los eventos llegan al esquema <code>amp_events</code> en el destino de Midas. La tabla principal es <code>amp_events.pages</code>.</li>
+<li>El <code>anonymousId</code> en páginas AMP tiene el formato <code>amp-&lt;id&gt;</code> y es distinto al <code>anonymous_id</code> que genera el SDK de JavaScript en páginas no-AMP. Esto significa que un mismo usuario navegando entre páginas AMP (en caché de Google) y páginas normales del sitio generará dos identidades separadas; el AMP Linker mitiga esto entre páginas AMP, pero no entre AMP y no-AMP.</li>
+<li>No incluir el snippet en páginas no-AMP; para esas páginas el tracking ya está cubierto por el SDK de JavaScript de Midas.</li>
+<li>Los UTM no se capturan automáticamente; deben enviarse explícitamente vía <code>extraUrlParams</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
