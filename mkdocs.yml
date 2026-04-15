@@ -1,5 +1,5 @@
-site_name: Mi Documentación
-site_url: https://tudomain.com
+site_name: CDP de Midas - Documentación
+site_url: https://docs.m1das.app
 
 theme:
   name: material
@@ -13,9 +13,13 @@ theme:
     - search.suggest
     - search.highlight
 
-docs_dir: docs
+docs_dir: .
 exclude_docs: |
   INSTRUCCIONES.md
+  requirements.txt
+  vercel.json
+  mkdocs.yml
+  .DS_Store
 
 nav:
   - Inicio: README.md
