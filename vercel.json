@@ -1,5 +1,6 @@
 {
-  "buildCommand": "pip install mkdocs-material && mkdocs build",
+  "framework": null,
+  "buildCommand": "pip3 install mkdocs-material && mkdocs build",
   "outputDirectory": "site",
   "installCommand": "echo 'skip'"
 }
