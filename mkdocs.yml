@@ -1,0 +1,45 @@
+site_name: Mi Documentación
+site_url: https://tudomain.com
+
+theme:
+  name: material
+  language: es
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+docs_dir: docs
+exclude_docs: |
+  INSTRUCCIONES.md
+
+nav:
+  - Inicio: README.md
+  - Comenzando:
+      - Conceptos: comenzando/conceptos.md
+      - Instalación: comenzando/instalacion.md
+      - Primer evento: comenzando/primer-evento.md
+  - Casos de uso:
+      - E-commerce: casos-uso/ecommerce.md
+  - Tracking:
+      - Web:
+          - JavaScript: tracking/web/javascript.md
+          - React: tracking/web/react.md
+          - GTM: tracking/web/gtm.md
+          - AMP: tracking/web/amp.md
+          - Pixel: tracking/web/pixel.md
+      - Backend:
+          - HTTP API: tracking/backend/http-api.md
+  - Destinos:
+      - Configuración: destinos/configuracion.md
+      - Warehouses: destinos/warehouses.md
+  - Referencia:
+      - API: referencia/api.md
+      - Eventos: referencia/eventos.md
+  - Recursos:
+      - FAQ: recursos/faq.md
+      - Mejores prácticas: recursos/mejores-practicas.md
