@@ -26,6 +26,10 @@
 
 * [E-commerce](casos-uso/ecommerce.md)
 
+## Resolución de audiencias
+
+* [Audiencias](resolucion-audiencias/CLIENT_SCRIPT_INSTALLATION.md)
+
 ## Referencia
 
 * [API Reference](referencia/api.md)
