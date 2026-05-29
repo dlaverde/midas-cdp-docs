@@ -67,7 +67,7 @@ Tambien puede instalarse inline si el cliente recibe el contenido completo del a
 Antes de instalarlo, se deben revisar estos valores dentro del script:
 
 ```js
-const RESOLVER_URL = "https://resolver.rcnaudiences.com/resolve";
+const RESOLVER_URL = "https://resolver.companydomain.com/resolve";
 const API_KEY = "TU_API_KEY";
 ```
 
@@ -82,8 +82,8 @@ El script espera recibir una respuesta JSON con esta estructura:
 ```json
 {
   "anonymous_id": "e2f5d9a9-14eb-4b93-a403-d17eb0412872",
-  "audiences": ["aud:rcn:test-interests"],
-  "interests": ["noticias", "mundo", "colombia"]
+  "audiences": ["aud:company:interests-audience"],
+  "interests": ["news", "world", "sports"]
 }
 ```
 
@@ -139,12 +139,12 @@ El cliente puede usar las audiencias para activar logica propia:
     const audiences = event.detail.audiences || [];
     const interests = event.detail.interests || [];
 
-    if (audiences.includes("aud:rcn:test-interests")) {
-      console.log("Visitor belongs to test-interests audience");
+    if (audiences.includes("aud:company:interests-audience")) {
+      console.log("Visitor belongs to interests-audience audience");
     }
 
-    if (interests.includes("noticias")) {
-      console.log("Visitor has noticias interest");
+    if (interests.includes("sports")) {
+      console.log("Visitor has sports interest");
     }
   });
 </script>
