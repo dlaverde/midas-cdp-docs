@@ -54,13 +54,6 @@ jitsu.track('button_clicked', {
 - **[Casos de Uso](casos-uso/ecommerce.md)** - Ejemplos prácticos
 - **[Referencia](referencia/api.md)** - API completa
 
-## Soporte
-
-¿Necesitas ayuda?
-- 📧 Email: [email protected]
-- 💬 Slack: [Tu canal de Slack]
-- 📚 Documentación: Esta guía
-
 ---
 
-**Última actualización**: Enero 2026
+**Última actualización**: Mayo 2026

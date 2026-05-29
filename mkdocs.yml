@@ -44,3 +44,5 @@ nav:
   - Recursos:
       - FAQ: recursos/faq.md
       - Mejores prácticas: recursos/mejores-practicas.md
+  - Audiencias:
+      - Instrucciones de instalación: resolucion-audiencias/CLIENT_SCRIPT_INSTALLATION.md
