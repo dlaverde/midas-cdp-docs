@@ -29,6 +29,7 @@
 ## Resolución de audiencias
 
 * [Audiencias](resolucion-audiencias/CLIENT_SCRIPT_INSTALLATION.md)
+* [API](resolucion-audiencias/api.md)
 
 ## Referencia
 
