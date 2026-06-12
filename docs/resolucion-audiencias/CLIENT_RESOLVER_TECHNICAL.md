@@ -99,8 +99,6 @@ Si despues de los reintentos no hay cookie, el script debe terminar sin bloquear
 https://resolver.rcnaudiences.com/resolve
 ```
 
-La URL exacta de produccion sera confirmada al momento de la integracion.
-
 ### Metodo HTTP
 
 ```text
